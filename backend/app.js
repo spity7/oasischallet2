@@ -10,8 +10,6 @@ const csp = require("./middlewares/csp");
 const userRoutes = require("./routes/userRoutes");
 const terminRoutes = require("./routes/terminRoutes");
 
-require("dotenv").config();
-
 const app = express();
 
 // -------- JSON Body Parser --------
