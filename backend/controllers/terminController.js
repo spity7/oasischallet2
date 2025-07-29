@@ -116,7 +116,7 @@ exports.getTermins = async (req, res) => {
       $and: [
         { startDate: { $lte: new Date(endDate) } },
         { endDate: { $gte: new Date(startDate) } },
-        { endDate: { $gte: new Date() } }, // Nur zukünftige oder laufende Termine
+        { endDate: { $gte: new Date() } }, // Only future or current appointments
       ],
     }).select("name guestCount price downPayment startDate endDate");
 
